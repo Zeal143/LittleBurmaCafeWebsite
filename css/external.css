@@ -1,0 +1,369 @@
+/* =========================================================
+   BASE STYLES
+========================================================= */
+:root {
+    --primary: #8B4513;
+    --secondary: #D2B48C;
+    --accent: #556B2F;
+    --light: #F5F5DC;
+    --dark: #333;
+    --text: #2C2C2C;
+    --white: #FFFFFF;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light);
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary) !important;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+/* =========================================================
+   NAVBAR (Bootstrap enhanced)
+========================================================= */
+
+/* Match BloomCafe header height */
+.navbar {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+/* Nav links */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #333 !important;
+    transition: 0.3s;
+}
+
+/* Hover color */
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Hover underline */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active link underline */
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* =========================================================
+   HERO CAROUSEL (Matches original BloomCafe proportions)
+========================================================= */
+.hero-img {
+    height: 80vh !important;
+    object-fit: cover;
+}
+
+/* Dark gradient overlay */
+.carousel-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    );
+    z-index: 2;
+}
+
+/* Ensure caption is above overlay */
+.carousel-caption {
+    z-index: 3;
+    bottom: 40% !important;   /* Correct BloomCafe position */
+    transform: translateY(50%);
+}
+
+/* Text styles */
+.hero-caption h1 {
+    font-size: 3.5rem !important;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero-caption p {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* Button theme */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #6d340f;
+    border-color: #6d340f;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+@media (max-width: 768px) {
+
+    .hero-caption h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero-caption p {
+        font-size: 1rem !important;
+    }
+
+    .carousel-caption {
+        bottom: 25% !important;
+        transform: translateY(20%);
+    }
+
+    .navbar {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+}
+
+/* ========================= INTRO SECTION ========================= */
+.intro-section {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ========================= SPECIALTIES SECTION ========================= */
+.specialties-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.specialty-card {
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+    transform: translateY(-8px);
+}
+
+.specialty-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.specialty-title {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.specialty-desc {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   FOOTER — Complete Section (Optimized to match Bloom Café)
+========================================================= */
+
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 50px 0 25px;   /* Bloom Café size */
+    margin-top: 60px;
+}
+
+.footer-content {
+    margin-bottom: 25px;
+}
+
+.footer-column h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Underline below footer headings */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+/* Justify the text under "Little Burma Café" */
+.footer-column p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Remove Bootstrap padding/margin so lists align perfectly */
+.footer-column ul {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+    color: var(--white);
+    text-align: left;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+    padding-left: 4px;
+}
+
+/* Social icons */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;     /* original Bloom Café size */
+    height: 36px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+
+    .footer {
+        text-align: center;
+        padding: 40px 0 20px;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
