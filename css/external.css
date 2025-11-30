@@ -367,3 +367,79 @@ ul {
         justify-content: center;
     }
 }
+
+/* Menu */
+.cuisine-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cuisine-title {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+/* Slider layout */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Each Dish Card (4 shown at once) */
+.dish-card {
+    min-width: calc(25% - 15px);
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding-bottom: 15px;
+}
+
+.dish-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.dish-card h4 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+/* Buttons */
+.slider-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 1.8rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background: var(--accent);
+}
+
+/* Responsive (2 cards on mobile) */
+@media (max-width: 768px) {
+    .dish-card {
+        min-width: calc(50% - 10px);
+    }
+}
