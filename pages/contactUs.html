@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contact Us Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bloom Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">Bloom<span>Café</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Reservations.html">Reservations</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Contact.html" class="active">Contact</a></li>
+                <li><a href="Career.html">Careers</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>We'd love to hear from you. Send us a message or visit our café.</p>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>123 Culinary Street, Food District<br>New York, NY 10001</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>(555) 123-4567</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@bloomcafe.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>Mon–Fri: 8am - 10pm<br>Sat–Sun: 9am - 11pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="5" required></textarea>
+                    </div>
+
+                    <button class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
