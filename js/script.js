@@ -70,10 +70,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* ===================================================
+     /* ===================================================
        CAREERS FORM VALIDATION
     =================================================== */
-    const jobForm = document.getElementById("job-application-form");
+    const jobForm   = document.getElementById("job-application-form");
+    const cvInput   = document.getElementById("app-cv");
+    const cvTrigger = document.getElementById("app-cv-trigger");
+    const cvLabel   = document.getElementById("app-cv-label");
 
     if (jobForm) {
         jobForm.addEventListener("submit", function (e) {
@@ -112,10 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 valid = false;
             }
 
-            // POSITION
+            // POSITION (dropdown)
             if (position === "") {
                 document.getElementById("err-app-position").textContent =
-                    "Please enter the position you're applying for.";
+                    "Please select the position you're applying for.";
                 valid = false;
             }
 
@@ -135,7 +138,29 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             alert("Thank you for applying! We will review your application.");
             jobForm.reset();
-        });
-    }
 
-});
+            // Reset CV label after successful submit
+            if (cvLabel) {
+                cvLabel.textContent = "Click here to choose a file (PDF, DOC, DOCX)";
+            }
+        });
+
+        /* =======================
+           CAREERS CV UPLOAD CLICK
+        ======================== */
+        if (cvInput && cvTrigger && cvLabel) {
+            // Open file dialog when the pretty box is clicked
+            cvTrigger.addEventListener("click", function () {
+                cvInput.click();
+            });
+
+            // Show selected file name
+            cvInput.addEventListener("change", function () {
+                if (cvInput.files.length > 0) {
+                    cvLabel.textContent = "Selected: " + cvInput.files[0].name;
+                } else {
+                    cvLabel.textContent = "Click here to choose a file (PDF, DOC, DOCX)";
+                }
+            });
+        }
+    }
