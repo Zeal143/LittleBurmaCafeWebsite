@@ -30,7 +30,7 @@
                 <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                 <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                <li class="nav-item"><a class="nav-link" href="reservations.html">Reservation</a></li>
                 <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact</a></li>
                 <li class="nav-item"><a class="nav-link active" href="careers.html">Career</a></li>
             </ul>
@@ -43,9 +43,9 @@
 <section class="section careers pt-5 mt-5">
     <div class="container">
 
-        <h2 class="section-title">Career Opportunities</h2>
+        <h2 class="section-title mb-4">Career Opportunities</h2>
 
-        <div class="careers-intro">
+        <div class="careers-intro mb-5">
             <h3>Join the Little Burma Family</h3>
             <p>
                 At Little Burma Café, our team is the heart of everything we do.
@@ -58,12 +58,12 @@
             </p>
         </div>
 
-        <h3 class="text-center" style="margin-bottom: 30px;">Current Openings</h3>
+        <h3 class="text-center mb-4">Current Openings</h3>
 
         <div class="job-openings">
 
             <!-- JOB 1 -->
-            <div class="job-card">
+            <div class="job-card mb-4">
                 <h3 class="job-title">Line Cook</h3>
                 <div class="job-meta">
                     <span><i class="fas fa-map-marker-alt"></i> Dublin City Centre</span>
@@ -91,9 +91,8 @@
                 </div>
             </div>
 
-
             <!-- JOB 2 -->
-            <div class="job-card">
+            <div class="job-card mb-4">
                 <h3 class="job-title">Barista</h3>
                 <div class="job-meta">
                     <span><i class="fas fa-map-marker-alt"></i> Dublin City Centre</span>
@@ -121,9 +120,8 @@
                 </div>
             </div>
 
-
             <!-- JOB 3 -->
-            <div class="job-card">
+            <div class="job-card mb-4">
                 <h3 class="job-title">Front of House Server</h3>
                 <div class="job-meta">
                     <span><i class="fas fa-map-marker-alt"></i> Dublin City Centre</span>
@@ -154,37 +152,38 @@
         </div>
 
 
-
-        <!-- ================= APPLICATION FORM ================= -->
-        <div class="application-form">
-            <h3 class="text-center" style="margin-bottom: 30px;">Apply Now</h3>
+        <!-- ================= UPDATED APPLICATION FORM ================= -->
+        <div class="application-form mt-5">
+            <h3 class="text-center mb-4">Apply Now</h3>
 
             <form id="job-application-form" novalidate>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="app-name">Your Name</label>
-                        <input id="app-name" type="text" class="form-control">
-                        <span class="error" id="err-app-name"></span>
-                    </div>
+                <!-- NAME -->
+                <div class="mb-3">
+                    <label for="app-name">Your Name</label>
+                    <input id="app-name" type="text" class="form-control">
+                    <span class="error" id="err-app-name"></span>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
+                <!-- EMAIL + PHONE (Bootstrap grid row) -->
+                <div class="row mb-3">
+
+                    <div class="col-md-6 mb-3">
                         <label for="app-email">Email</label>
-                        <input id="app-email" type="email" class="form-control">
+                        <input id="app-email" type="text" class="form-control">
                         <span class="error" id="err-app-email"></span>
                     </div>
 
-                    <div class="form-group">
+                    <div class="col-md-6 mb-3">
                         <label for="app-phone">Phone</label>
-                        <input id="app-phone" type="tel" class="form-control">
+                        <input id="app-phone" type="text" class="form-control">
                         <span class="error" id="err-app-phone"></span>
                     </div>
+
                 </div>
 
                 <!-- DROPDOWN -->
-                <div class="form-group">
+                <div class="mb-3">
                     <label for="app-position">Position Applied For</label>
                     <select id="app-position" class="form-control">
                         <option value="">-- Select a Position --</option>
@@ -195,12 +194,26 @@
                     <span class="error" id="err-app-position"></span>
                 </div>
 
-                <div class="form-group">
+                <!-- EXPERIENCE -->
+                <div class="mb-4">
                     <label for="app-experience">Relevant Experience</label>
                     <textarea id="app-experience" class="form-control" rows="4"></textarea>
                     <span class="error" id="err-app-experience"></span>
                 </div>
 
+                <!-- RESTORED FILE UPLOAD BOX -->
+                <div class="mb-4">
+                    <label for="app-cv">Attach Your CV (Optional)</label>
+					<!-- real file upload -->
+					<input type="file" id="app-cv" class="d-none">
+					
+                    <div class="file-upload" id="app-cv-trigger">
+                        <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <p id="app-cv-label">Click here to choose a file (PDF, DOC, DOCX)</p>
+                    </div>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
                 <div class="form-group" style="text-align: center;">
                     <button type="submit" class="btn">Submit Application</button>
                 </div>
@@ -233,14 +246,13 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="reservations.html">Reservation</a></li>
                 </ul>
             </div>
 
             <div class="col-md-3 footer-column">
                 <h3>Information</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Gallery</a></li>
                     <li><a href="careers.html">Careers</a></li>
                     <li><a href="contactUs.html">Contact</a></li>
                 </ul>
