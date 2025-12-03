@@ -1,4 +1,3 @@
-
 /* =========================================================
    BASE STYLES
 ========================================================= */
@@ -76,16 +75,13 @@ ul {
 }
 
 /* =========================================================
-   NAVBAR (Bootstrap enhanced)
+   NAVBAR
 ========================================================= */
-
-/* Match BloomCafe header height */
 .navbar {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
 }
 
-/* Nav links */
 .nav-link {
     position: relative;
     font-weight: 500;
@@ -93,12 +89,10 @@ ul {
     transition: 0.3s;
 }
 
-/* Hover color */
 .nav-link:hover {
     color: var(--primary) !important;
 }
 
-/* Hover underline */
 .nav-link::after {
     content: "";
     position: absolute;
@@ -114,7 +108,6 @@ ul {
     width: 100%;
 }
 
-/* Active link underline */
 .nav-link.active {
     color: var(--primary) !important;
 }
@@ -124,14 +117,13 @@ ul {
 }
 
 /* =========================================================
-   HERO CAROUSEL (Matches original BloomCafe proportions)
+   HERO CAROUSEL
 ========================================================= */
 .hero-img {
     height: 80vh !important;
     object-fit: cover;
 }
 
-/* Dark gradient overlay */
 .carousel-dark-overlay {
     position: absolute;
     top: 0;
@@ -145,14 +137,12 @@ ul {
     z-index: 2;
 }
 
-/* Ensure caption is above overlay */
 .carousel-caption {
     z-index: 3;
-    bottom: 40% !important;   /* Correct BloomCafe position */
+    bottom: 40% !important;
     transform: translateY(50%);
 }
 
-/* Text styles */
 .hero-caption h1 {
     font-size: 3.5rem !important;
     font-weight: 700;
@@ -165,7 +155,6 @@ ul {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 }
 
-/* Button theme */
 .btn-primary {
     background-color: var(--primary);
     border-color: var(--primary);
@@ -177,10 +166,9 @@ ul {
 }
 
 /* =========================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ========================================================= */
 @media (max-width: 768px) {
-
     .hero-caption h1 {
         font-size: 2rem !important;
     }
@@ -215,7 +203,6 @@ ul {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 /* ========================= SPECIALTIES SECTION ========================= */
 .specialties-section {
@@ -257,13 +244,39 @@ ul {
 }
 
 /* =========================================================
-   FOOTER — Complete Section (Optimized to match Bloom Café)
+   BOOTSTRAP CAROUSEL — OUTSIDE ARROWS
 ========================================================= */
 
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.custom-carousel .carousel-control-prev {
+    left: -50px;
+}
+
+.custom-carousel .carousel-control-next {
+    right: -50px;
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    filter: invert(1);
+    width: 35px;
+    height: 35px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
 .footer {
     background-color: var(--dark);
     color: var(--white);
-    padding: 50px 0 25px;   /* Bloom Café size */
+    padding: 50px 0 25px;
     margin-top: 60px;
 }
 
@@ -279,7 +292,6 @@ ul {
     padding-bottom: 8px;
 }
 
-/* Underline below footer headings */
 .footer-column h3::after {
     content: '';
     position: absolute;
@@ -290,13 +302,11 @@ ul {
     background-color: var(--primary);
 }
 
-/* Justify the text under "Little Burma Café" */
 .footer-column p {
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-/* Remove Bootstrap padding/margin so lists align perfectly */
 .footer-column ul {
     padding-left: 0 !important;
     margin-left: 0 !important;
@@ -319,7 +329,6 @@ ul {
     padding-left: 4px;
 }
 
-/* Social icons */
 .social-links {
     display: flex;
     gap: 12px;
@@ -330,7 +339,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;     /* original Bloom Café size */
+    width: 36px;
     height: 36px;
     background-color: rgba(255,255,255,0.1);
     border-radius: 50%;
@@ -342,7 +351,6 @@ ul {
     transform: translateY(-2px);
 }
 
-/* Footer bottom */
 .footer-bottom {
     text-align: center;
     padding-top: 15px;
@@ -351,9 +359,7 @@ ul {
     color: #ccc;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
-
     .footer {
         text-align: center;
         padding: 40px 0 20px;
@@ -368,148 +374,3 @@ ul {
         justify-content: center;
     }
 }
-
-/* Menu */
-.cuisine-section {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.cuisine-title {
-    font-size: 2rem;
-    color: var(--primary);
-    margin-bottom: 25px;
-}
-
-/* Slider layout */
-.slider-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.slider-container {
-    overflow: hidden;
-    width: 100%;
-}
-
-.slider-track {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Each Dish Card (4 shown at once) */
-.dish-card {
-    min-width: calc(25% - 15px);
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    padding-bottom: 15px;
-}
-
-.dish-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.dish-card h4 {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    color: var(--primary);
-}
-/* Pyae Sone Aung */
-/* Contact Section */
-.contact-content {
-    display: flex;
-    gap: 50px;
-}
-
-.contact-info, .contact-form {
-    flex: 1;
-}
-
-.contact-info-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
-}
-
-.contact-info-item i {
-    font-size: 1.2rem;
-    color: var(--primary);
-    margin-right: 15px;
-    margin-top: 5px;
-}
-
-.map {
-    margin-top: 30px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-    width: 100%;
-    height: 300px;
-    border: none;
-}
-/* Buttons */
-.slider-btn {
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    font-size: 1.8rem;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.slider-btn:hover {
-    background: var(--accent);
-}
-
-/* Responsive (2 cards on mobile) */
-@media (max-width: 768px) {
-    .dish-card {
-        min-width: calc(50% - 10px);
-    }
-}
-
-/* Reservations Section */
-.reservations {
-    background-color: var(--white);
-}
-
-.reservation-form {
-    max-width: 600px;
-     margin: 0 auto;
-    background-color: var(--light);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-.form-group {
-    margin-bottom: 20px;
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.form-control {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-
-
-
