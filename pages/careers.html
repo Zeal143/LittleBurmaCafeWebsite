@@ -5,63 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - Little Burma Café</title>
 
-    <!-- External stylesheet shared with other pages -->
     <link rel="stylesheet" href="../css/external.css">
-	<!-- Java script file shared with other pages -- >
-	
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= HEADER / NAVIGATION ================= -->
-<header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
-            <!-- Updated Logo -->
-            <a class="navbar-brand logo" href="index.html">
-                Little<span> Burma</span> Café
-            </a>
-            <!-- Hamburger Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Nav Items -->
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="menu.html">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="aboutUs.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reservations.html">Reservation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactUs.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="careers.html">Career</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<!-- ================= CAREERS SECTION ================= -->
-<section class="section careers">
+<!-- ================= UPDATED NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
-        <!-- Page title -->
+        <a class="navbar-brand logo" href="../index.html">
+            Little<span> Burma</span> Café
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="careers.html">Career</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= ORIGINAL CAREERS CONTENT ================= -->
+<section class="section careers pt-5 mt-5">
+    <div class="container">
+
         <h2 class="section-title">Career Opportunities</h2>
 
-        <!-- Short intro text about working at the café -->
         <div class="careers-intro">
             <h3>Join the Little Burma Family</h3>
             <p>
@@ -75,51 +58,43 @@
             </p>
         </div>
 
-        <!-- ========== CURRENT OPENINGS LIST ========== -->
-        <h3 style="text-align: center; margin-bottom: 30px;">Current Openings</h3>
+        <h3 class="text-center" style="margin-bottom: 30px;">Current Openings</h3>
 
-        <!-- Grid of job cards -->
         <div class="job-openings">
-            <!-- ===== JOB CARD 1 ===== -->
-            <div class="job-card">
-                <!-- Job title -->
-                <h3 class="job-title">Line Cook</h3>
 
-                <!-- Meta info: location, type, pay -->
+            <!-- JOB 1 -->
+            <div class="job-card">
+                <h3 class="job-title">Line Cook</h3>
                 <div class="job-meta">
                     <span><i class="fas fa-map-marker-alt"></i> Dublin City Centre</span>
                     <span><i class="fas fa-clock"></i> Full-time</span>
                     <span><i class="fas fa-euro-sign"></i> €15–€18/hr</span>
                 </div>
 
-                <!-- Job description and responsibilities -->
                 <div class="job-description">
-                    <p>
-                        We’re looking for an experienced Line Cook to help prep, cook, and plate
-                        our Burmese-inspired dishes to a high standard during busy service.
-                    </p>
+                    <p>We’re looking for an experienced Line Cook...</p>
 
                     <h4>Responsibilities:</h4>
                     <ul>
-                        <li>Prepare and cook menu items to recipe and presentation standards</li>
-                        <li>Keep your station clean, organised, and safe at all times</li>
-                        <li>Work closely with the Head Chef and kitchen team</li>
-                        <li>Follow food safety and hygiene procedures</li>
+                        <li>Prepare and cook menu items</li>
+                        <li>Maintain a clean workspace</li>
+                        <li>Work with the kitchen team</li>
+                        <li>Follow hygiene standards</li>
                     </ul>
 
                     <h4>Requirements:</h4>
                     <ul>
-                        <li>1–2 years experience in a professional kitchen</li>
-                        <li>Ability to work under pressure during busy shifts</li>
-                        <li>Good communication and teamwork skills</li>
+                        <li>1–2 years kitchen experience</li>
+                        <li>Ability to work under pressure</li>
+                        <li>Teamwork skills</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- ===== JOB CARD 2 ===== -->
+
+            <!-- JOB 2 -->
             <div class="job-card">
                 <h3 class="job-title">Barista</h3>
-
                 <div class="job-meta">
                     <span><i class="fas fa-map-marker-alt"></i> Dublin City Centre</span>
                     <span><i class="fas fa-clock"></i> Part-time / Full-time</span>
@@ -127,32 +102,29 @@
                 </div>
 
                 <div class="job-description">
-                    <p>
-                        We’re looking for a friendly Barista with a love of coffee and people.
-                        You’ll be the face of the café, serving drinks and welcoming customers.
-                    </p>
+                    <p>Friendly Barista needed who loves coffee...</p>
 
                     <h4>Responsibilities:</h4>
                     <ul>
-                        <li>Prepare hot and cold coffee drinks to a high standard</li>
-                        <li>Take customer orders and handle payments</li>
-                        <li>Keep the bar area clean and well stocked</li>
-                        <li>Deliver warm, welcoming customer service</li>
+                        <li>Prepare hot & cold drinks</li>
+                        <li>Take customer orders</li>
+                        <li>Maintain bar area</li>
+                        <li>Provide warm customer service</li>
                     </ul>
 
                     <h4>Requirements:</h4>
                     <ul>
-                        <li>Previous barista or customer service experience (preferred)</li>
-                        <li>Strong communication and people skills</li>
-                        <li>Positive attitude and a willingness to learn</li>
+                        <li>Experience preferred</li>
+                        <li>People skills</li>
+                        <li>Positive attitude</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- ===== JOB CARD 3 ===== -->
+
+            <!-- JOB 3 -->
             <div class="job-card">
                 <h3 class="job-title">Front of House Server</h3>
-
                 <div class="job-meta">
                     <span><i class="fas fa-map-marker-alt"></i> Dublin City Centre</span>
                     <span><i class="fas fa-clock"></i> Part-time</span>
@@ -160,100 +132,144 @@
                 </div>
 
                 <div class="job-description">
-                    <p>
-                        We’re looking for energetic Servers to look after guests, take orders,
-                        and help create a relaxed, welcoming atmosphere in the café.
-                    </p>
+                    <p>Energetic servers who love customer service...</p>
 
                     <h4>Responsibilities:</h4>
                     <ul>
-                        <li>Welcome guests and show them to their tables</li>
-                        <li>Take food and drink orders accurately</li>
-                        <li>Serve dishes and check on guests throughout their visit</li>
-                        <li>Work closely with the kitchen and bar teams</li>
+                        <li>Greet guests</li>
+                        <li>Take accurate orders</li>
+                        <li>Serve dishes</li>
+                        <li>Work with the team</li>
                     </ul>
 
                     <h4>Requirements:</h4>
                     <ul>
-                        <li>Strong communication and customer service skills</li>
-                        <li>Ability to stay calm during busy periods</li>
-                        <li>Attention to detail and a friendly attitude</li>
+                        <li>Communication skills</li>
+                        <li>Calm under pressure</li>
+                        <li>Friendly attitude</li>
                     </ul>
                 </div>
             </div>
+
         </div>
 
-        <!-- ========== APPLICATION FORM ========== -->
-        <!-- Simple form for applicants to send their details -->
-        <div class="application-form">
-            <h3 style="text-align: center; margin-bottom: 30px;">Apply Now</h3>
 
-            <!-- You can change action / method later if you connect this to a backend -->
-            <form id="job-application-form">
-                <!-- Row with two inputs: first name + last name -->
+
+        <!-- ================= APPLICATION FORM ================= -->
+        <div class="application-form">
+            <h3 class="text-center" style="margin-bottom: 30px;">Apply Now</h3>
+
+            <form id="job-application-form" novalidate>
+
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="app-first-name">First Name</label>
-                        <input id="app-first-name" type="text" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="app-last-name">Last Name</label>
-                        <input id="app-last-name" type="text" class="form-control" required>
+                        <label for="app-name">Your Name</label>
+                        <input id="app-name" type="text" class="form-control">
+                        <span class="error" id="err-app-name"></span>
                     </div>
                 </div>
 
-                <!-- Row with email + phone -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="app-email">Email</label>
-                        <input id="app-email" type="email" class="form-control" required>
+                        <input id="app-email" type="email" class="form-control">
+                        <span class="error" id="err-app-email"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="app-phone">Phone</label>
-                        <input id="app-phone" type="tel" class="form-control" required>
+                        <input id="app-phone" type="tel" class="form-control">
+                        <span class="error" id="err-app-phone"></span>
                     </div>
                 </div>
 
-                <!-- Position field lets them type which role they're applying for -->
+                <!-- DROPDOWN -->
                 <div class="form-group">
                     <label for="app-position">Position Applied For</label>
-                    <input id="app-position" type="text" class="form-control" placeholder="e.g. Barista, Line Cook" required>
+                    <select id="app-position" class="form-control">
+                        <option value="">-- Select a Position --</option>
+                        <option value="Line Cook">Line Cook</option>
+                        <option value="Barista">Barista</option>
+                        <option value="Front of House Server">Front of House Server</option>
+                    </select>
+                    <span class="error" id="err-app-position"></span>
                 </div>
 
-                <!-- Experience text area -->
                 <div class="form-group">
                     <label for="app-experience">Relevant Experience</label>
-                    <textarea id="app-experience" class="form-control" rows="4" required></textarea>
+                    <textarea id="app-experience" class="form-control" rows="4"></textarea>
+                    <span class="error" id="err-app-experience"></span>
                 </div>
 
-                <!-- Cover letter text area -->
-                <div class="form-group">
-                    <label for="app-cover-letter">Cover Letter (Optional)</label>
-                    <textarea id="app-cover-letter" class="form-control" rows="5"
-                              placeholder="Tell us why you'd be a great fit..."></textarea>
-                </div>
-
-                <!-- Fake “upload” area – purely visual unless you add JS/backend -->
-                <div class="form-group">
-                    <label>Attach Your CV (Optional)</label>
-                    <div class="file-upload">
-                        <!-- Icon and text just for UI – no real upload without JS/backend -->
-                        <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                        <p>Attach your CV or résumé when submitting your application in person or by email.</p>
-                    </div>
-                </div>
-
-                <!-- Submit button -->
                 <div class="form-group" style="text-align: center;">
                     <button type="submit" class="btn">Submit Application</button>
                 </div>
+
             </form>
         </div>
 
     </div>
 </section>
+
+
+<!-- ================= UPDATED FOOTER ================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="row footer-content">
+
+            <div class="col-md-3 footer-column">
+                <h3>Little Burma Café</h3>
+                <p>Bringing the authentic flavors of Myanmar to your table.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-3 footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 footer-column">
+                <h3>Information</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 footer-column">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Yangon Street, Dublin</li>
+                    <li><i class="fas fa-phone"></i> +353 123 4567</li>
+                    <li><i class="fas fa-envelope"></i> info@littleburmacafe.com</li>
+                    <li><i class="fas fa-clock"></i> Mon–Sun: 8am – 10pm</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom text-center">
+            <p>&copy; 2025 Little Burma Café. All Rights Reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="../js/script.js"></script>
+
 </body>
 </html>
