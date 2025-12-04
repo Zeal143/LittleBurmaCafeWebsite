@@ -374,73 +374,282 @@ ul {
         justify-content: center;
     }
 }
-/*PSA*/
-        /* Reservation Section */
-        .reservation {
-            background-color: var(--white);
-            padding: 100px 30px;
-        }
 
-        .reservation-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: var(--light);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
+/* =========================================================
+   PSA - Reservations & About
+========================================================= */
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+/* Reservations Section */
+.reservations {
+    background-color: var(--white);
+}
 
-        .section-title{
-            color: #8B4513 ;
-        }
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--light);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
 
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        
-        /* About Section */
+.form-group {
+    margin-bottom: 20px;
+}
 
-        .about{
-            padding: 200px 0px;
-        }
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
 
-        .about-text {
-            flex: 1;
-        }
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
 
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
 
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: var(--transition);
-        }
+.about-text {
+    flex: 1;
+}
 
-        .about-image img:hover {
-            transform: scale(1.05);
-        }
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
 
 /* Error Label Color */
 
     .error{
         color: red;
     }
+
+/* =========================================================
+   CONTACT PAGE By Thant Sin
+   (contactUs.html)
+========================================================= */
+
+/* Layout: info on left, form on right */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Left column: info block */
+.contact-info {
+    flex: 1 1 260px;
+}
+
+/* Right column: form card */
+.contact-form {
+    flex: 1 1 320px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Titles inside contact section */
+.contact-info h3,
+.contact-form h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Small text spacing */
+.contact-info p {
+    margin-bottom: 12px;
+}
+
+/* Each info row (icon + text) */
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.contact-info-item i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--primary);
+    margin-top: 3px;
+}
+
+.contact-info-item h4 {
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Make sure inputs look nice (extends existing .form-control) */
+.contact-form .form-control {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: var(--transition);
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.12rem rgba(139, 69, 19, 0.25);
+}
+
+/* Button in contact form */
+.contact-form .btn {
+    margin-top: 5px;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        margin-top: 10px;
+    }
+}
+
+/* Optional special background for a contact section if used */
+.section.contact-section {
+    background-color: #F7F7DB;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* =========================================================
+   FORM ERROR STYLE (Contact + Careers)
+========================================================= */
+
+/* Error text under each field */
+.error {
+    color: #c0392b;   /* deep red */
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Highlight input with red border when error appears */
+.form-control.error-field {
+    border-color: #c0392b !important;
+    box-shadow: 0 0 0 0.1rem rgba(192, 57, 43, 0.25);
+}
+
+/* =========================================================
+   CAREERS PAGE LAYOUT (Current Openings)
+========================================================= */
+
+/* Light background for the careers section */
+.section.careers {
+    background-color: #F7F7DB;           /* soft cream */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Center the heading & give space */
+.section.careers .section-title,
+.section.careers h3.text-center {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Grid of job cards: 1 per row on small, 2 per row on large */
+.job-openings {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);  /* default: 1 column */
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;              /* center in page */
+}
+
+/* 2 cards per row on desktop */
+@media (min-width: 992px) {
+    .job-openings {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Individual job card */
+.job-card {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 24px 32px;
+    border: 1px solid #efe2c8;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Subtle hover like reference site */
+.job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Job title */
+.job-card .job-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+/* Small meta row: location, type, pay */
+.job-card .job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.job-card .job-meta span i {
+    margin-right: 0.3rem;
+    color: var(--primary);
+}
+
+/* Text inside card */
+.job-card .job-description p {
+    margin-bottom: 0.75rem;
+}
+
+.job-card .job-description h4 {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.job-card .job-description ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-card .job-description ul li {
+    margin-bottom: 0.25rem;
+}
