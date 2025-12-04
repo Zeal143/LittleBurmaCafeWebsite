@@ -227,19 +227,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 valid = false;
             }
 
-            if (special.length > -1 && special.length < 5) {
+            if (special.length > 0 && special.length < 5) {
                 document.getElementById("err-special").textContent =
                     "Special requests must be at least 5 characters.";
                 valid = false;
             }
 
-            if (!valid) e.preventDefault();
-            else {
-                e.preventDefault();
-                alert("Your reservation has been submitted!");
-                bookingForm.reset();
+            // if (!valid) e.preventDefault();
+            // else {
+            //     e.preventDefault();
+            //     alert("Your reservation has been submitted!");
+            //     bookingForm.reset();
+            // }
+
+            // STOP if not valid
+            if (!valid) return;
+
+            // SUCCESS — Show Modal
+            const reservationModalEl = document.getElementById("reservationSuccessModal");
+            if (reservationModalEl) {
+                const reservationModal = new bootstrap.Modal(reservationModalEl);
+                reservationModal.show();
             }
+
+            // Reset the form
+            bookingForm.reset();            
         });
+
     }
 
 });
