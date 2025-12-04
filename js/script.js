@@ -164,3 +164,72 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
+    /* ===================================================
+       RESERVATION FORM VALIDATION
+    =================================================== */
+    const bookingForm = document.getElementById("booking-form");
+
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", function (e) {
+
+            bookingForm.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+            let valid = true;
+
+            const name     = document.getElementById("name").value.trim();
+            const email    = document.getElementById("email").value.trim();
+            const phone    = document.getElementById("phone").value.trim();
+            const date     = document.getElementById("date").value.trim();
+            const time     = document.getElementById("time").value.trim();
+            const guests   = document.getElementById("guests").value.trim();
+            const special  = document.getElementById("special-requests").value.trim();
+
+            if (name.length < 2) {
+                document.getElementById("err-name").textContent = "Name must be at least 2 characters.";
+                valid = false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("err-email").textContent = "Please enter a valid email address.";
+                valid = false;
+            }
+
+            const phoneDigits = phone.replace(/\D/g, "");
+            if (phoneDigits.length < 7) {
+                document.getElementById("err-phone").textContent = "Please enter a valid phone number.";
+                valid = false;
+            }
+
+            if (date === "") {
+                document.getElementById("err-date").textContent = "Please select a reservation date.";
+                valid = false;
+            }
+
+            if (time === "") {
+                document.getElementById("err-time").textContent = "Please select a reservation time.";
+                valid = false;
+            }
+
+            if (guests === "") {
+                document.getElementById("err-guests").textContent = "Please select the number of guests.";
+                valid = false;
+            }
+
+            if (special.length > -1 && special.length < 5) {
+                document.getElementById("err-special").textContent =
+                    "Special requests must be at least 5 characters.";
+                valid = false;
+            }
+
+            if (!valid) e.preventDefault();
+            else {
+                e.preventDefault();
+                alert("Your reservation has been submitted!");
+                bookingForm.reset();
+            }
+        });
+    }
+
+});
+
