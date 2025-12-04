@@ -63,7 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // SUCCESS
             e.preventDefault();
-            alert("Thank you! Your message has been sent.");
+           // Show Contact Success Modal
+		   const contactModalEl = document.getElementById("contactSuccessModal");
+		   if (contactModalEl) {
+			   const contactModal = new bootstrap.Modal(contactModalEl);
+			   contactModal.show();
+		   }
             contactForm.reset();
         });
     }
@@ -136,13 +141,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // SUCCESS
             e.preventDefault();
-            alert("Thank you for applying! We will review your application.");
-            jobForm.reset();
+            const thankYouModalEl = document.getElementById("thankYouModal");
+            if (thankYouModalEl) {
+				const thankYouModal = new bootstrap.Modal(thankYouModalEl);
+				thankYouModal.show();
+			}
+			
+			jobForm.reset();
+			if (cvLabel) {
+				cvLabel.textContent = "Click here to choose a file (PDF, DOC, DOCX)";
+			}
 
-            // Reset CV label after successful submit
-            if (cvLabel) {
-                cvLabel.textContent = "Click here to choose a file (PDF, DOC, DOCX)";
-            }
         });
 
         /* =======================
