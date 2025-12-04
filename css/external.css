@@ -392,11 +392,15 @@ ul {
         .form-group {
             margin-bottom: 20px;
         }
-
+/*
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
+        }*/
+
+        .section-title{
+            color: #8B4513 ;
         }
 
         .form-control {
@@ -435,3 +439,9 @@ ul {
         .about-image img:hover {
             transform: scale(1.05);
         }
+
+/* Reservations Section */
+
+    .error{
+        color: red;
+    }

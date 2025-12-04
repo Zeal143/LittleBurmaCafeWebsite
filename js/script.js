@@ -172,6 +172,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (bookingForm) {
         bookingForm.addEventListener("submit", function (e) {
 
+            e.preventDefault();
+
             bookingForm.querySelectorAll(".error").forEach(el => el.textContent = "");
 
             let valid = true;
