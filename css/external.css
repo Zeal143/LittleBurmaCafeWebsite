@@ -380,8 +380,13 @@ ul {
 ========================================================= */
 
 /* Reservations Section */
-.reservations {
+.reservation {
     background-color: var(--white);
+    padding: 100px 0px;
+}
+
+.section-title{
+    color: #8B4513 ;
 }
 
 .reservation-form {
@@ -397,12 +402,6 @@ ul {
     margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
 .form-control {
     width: 100%;
     padding: 12px;
@@ -412,6 +411,10 @@ ul {
 }
 
 /* About Section */
+
+.about{
+    padding: 100px 0px;
+}
 .about-content {
     display: flex;
     align-items: center;
@@ -442,9 +445,9 @@ ul {
 
 /* Error Label Color */
 
-    .error{
-        color: red;
-    }
+.error{
+    color: red;
+}
 
 /* =========================================================
    CONTACT PAGE By Thant Sin
