@@ -375,8 +375,8 @@ ul {
     }
 }
 /*PSA*/
-        /* Reservations Section */
-        .reservations {
+        /* Reservation Section */
+        .reservation {
             background-color: var(--white);
         }
 
@@ -440,7 +440,7 @@ ul {
             transform: scale(1.05);
         }
 
-/* Reservations Section */
+/* Error Label Color */
 
     .error{
         color: red;
