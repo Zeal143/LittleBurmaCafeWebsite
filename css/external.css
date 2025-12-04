@@ -378,6 +378,7 @@ ul {
         /* Reservation Section */
         .reservation {
             background-color: var(--white);
+            padding: 100px 30px;
         }
 
         .reservation-form {
@@ -392,12 +393,6 @@ ul {
         .form-group {
             margin-bottom: 20px;
         }
-/*
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }*/
 
         .section-title{
             color: #8B4513 ;
@@ -412,6 +407,10 @@ ul {
         }
         
         /* About Section */
+
+        .about{
+            padding: 200px 0px;
+        }
         .about-content {
             display: flex;
             align-items: center;
