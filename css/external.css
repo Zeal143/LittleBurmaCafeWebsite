@@ -1,6 +1,4 @@
-/* =========================================================
-   BASE STYLES
-========================================================= */
+/* Base Styles */
 :root {
     --primary: #8B4513;
     --secondary: #D2B48C;
@@ -61,9 +59,7 @@ ul {
     transform: translateY(-2px);
 }
 
-/* =========================================================
-   LOGO
-========================================================= */
+/* Logo */
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -74,9 +70,7 @@ ul {
     color: var(--accent);
 }
 
-/* =========================================================
-   NAVBAR
-========================================================= */
+/* Navbar */
 .navbar {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
@@ -116,9 +110,7 @@ ul {
     width: 100%;
 }
 
-/* =========================================================
-   HERO CAROUSEL
-========================================================= */
+/* Carousel */
 .hero-img {
     height: 80vh !important;
     object-fit: cover;
@@ -165,9 +157,7 @@ ul {
     border-color: #6d340f;
 }
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* Responsive */
 @media (max-width: 768px) {
     .hero-caption h1 {
         font-size: 2rem !important;
@@ -188,7 +178,7 @@ ul {
     }
 }
 
-/* ========================= INTRO SECTION ========================= */
+/* Intro Section*/
 .intro-section {
     padding: 80px 0;
     background-color: var(--light);
@@ -204,7 +194,7 @@ ul {
     margin-right: auto;
 }
 
-/* ========================= SPECIALTIES SECTION ========================= */
+/* Specialities Section*/
 .specialties-section {
     padding: 80px 0;
     background-color: var(--white);
@@ -243,10 +233,7 @@ ul {
     margin-bottom: 15px;
 }
 
-/* =========================================================
-   BOOTSTRAP CAROUSEL — OUTSIDE ARROWS
-========================================================= */
-
+/* Bootstrap Carousel Arrows */
 .custom-carousel .carousel-control-prev,
 .custom-carousel .carousel-control-next {
     width: auto;
@@ -270,9 +257,7 @@ ul {
     height: 35px;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* Footer */
 .footer {
     background-color: var(--dark);
     color: var(--white);
@@ -375,9 +360,7 @@ ul {
     }
 }
 
-/* =========================================================
-   PSA - Reservations & About
-========================================================= */
+/* PSA - Reservations & About */
 
 /* Reservations Section */
 .reservation {
@@ -449,10 +432,7 @@ ul {
     color: red;
 }
 
-/* =========================================================
-   CONTACT PAGE By Thant Sin
-   (contactUs.html)
-========================================================= */
+/* CONTACT PAGE By Thant Sin (contactUs.html) */
 
 /* Layout: info on left, form on right */
 .contact-content {
@@ -545,9 +525,7 @@ ul {
     padding-bottom: 80px;
 }
 
-/* =========================================================
-   FORM ERROR STYLE (Contact + Careers)
-========================================================= */
+/* FORM ERROR STYLE (Contact + Careers) */
 
 /* Error text under each field */
 .error {
@@ -563,9 +541,7 @@ ul {
     box-shadow: 0 0 0 0.1rem rgba(192, 57, 43, 0.25);
 }
 
-/* =========================================================
-   CAREERS PAGE LAYOUT (Current Openings)
-========================================================= */
+/* CAREERS PAGE LAYOUT (Current Openings) */
 
 /* Light background for the careers section */
 .section.careers {
