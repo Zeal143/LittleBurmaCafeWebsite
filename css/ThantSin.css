@@ -1,0 +1,356 @@
+/* ==========================
+   GLOBAL COLORS & BASE
+   (Contact page only)
+========================== */
+
+:root {
+    --primary: #8B4513;
+    --secondary: #D2B48C;
+    --accent: #556B2F;
+    --light: #F5F5DC;
+    --dark: #333;
+    --text: #2C2C2C;
+    --white: #FFFFFF;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3efe7;   /* soft warm beige */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+/* Links / lists */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Optional: keep same container feel */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ==========================
+   LOGO & NAVBAR
+========================== */
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary) !important;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.navbar {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    box-shadow: var(--shadow);
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #333 !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Small screens navbar tweaks */
+@media (max-width: 768px) {
+    .navbar {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+}
+
+/* ==========================
+   CONTACT PAGE LAYOUT
+========================== */
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+/* Layout: info left, form right */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;           /* wrap on smaller screens */
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Left side: info */
+.contact-info {
+    flex: 1 1 260px;
+}
+
+/* Right side: form card */
+.contact-form {
+    flex: 1 1 320px;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+}
+
+/* Headings */
+.contact-info h2,
+.contact-form h3 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    color: #4a2f06;
+    margin-bottom: 18px;
+}
+
+/* Small text in info block */
+.contact-info p {
+    margin-bottom: 12px;
+}
+
+/* Icon rows on left */
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.contact-info-item i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--primary);
+    margin-top: 3px;
+}
+
+.contact-info-item h4 {
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Labels */
+.contact-form label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #443;
+}
+
+/* Inputs */
+.contact-form .form-control {
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #d5c5aa;
+    transition: 0.3s;
+}
+
+/* Input Focus */
+.contact-form .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
+}
+
+/* Textarea height fix */
+#contact-message {
+    min-height: 120px;
+}
+
+/* Button */
+.contact-form .btn {
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.contact-form .btn:hover {
+    background-color: #5e2f0d;
+    transform: translateY(-2px);
+}
+
+/* Error messages */
+.error {
+    color: #c41e3a;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Stack columns on mobile */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 50px 0 25px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    margin-bottom: 25px;
+}
+
+.footer-column h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.footer-column p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+    color: var(--white);
+    text-align: left;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+    padding-left: 4px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        padding: 40px 0 20px;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-links li {
+        text-align: center;
+    }
+}
