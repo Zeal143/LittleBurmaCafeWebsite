@@ -1,3 +1,4 @@
+/* Custom CSS by Set Oo Hlaing */
 /* Base Styles */
 :root {
     --primary: #8B4513;
@@ -110,8 +111,6 @@ ul {
 .nav-link.active::after {
     width: 100%;
 }
-
-/* Contact Us Page Custom CSS */
 
 /* Soft teal background behind contact section */
 .contact-content {
